@@ -34,4 +34,5 @@ setup(
     zip_safe=False,
     classifiers=["License :: OSI Approved :: Apache Software License"],
     extras_require={"tests": tests_require, "dev": dev_require},
+    install_requires=["iamdata"],
 )
