@@ -20,10 +20,7 @@
 
 """
 
-from iamdata import IAMData
-
-def build_service_actions_from_service_data():
-    iam_data = IAMData()
+def build_service_actions_from_service_data(iam_data):
     permissions = set()
     for service_key in iam_data.services.get_service_keys():
         service_name = iam_data.services.get_service_name(service_key)

@@ -1,8 +1,6 @@
 from collections import defaultdict
 
 from policyuniverse import _action_categories
-from iamdata import IAMData
-
 
 def translate_aws_action_groups(groups):
     """
@@ -46,9 +44,8 @@ def translate_aws_action_groups(groups):
     return "Unknown"
 
 
-def build_action_categories_from_service_data():
+def build_action_categories_from_service_data(iam_data):
     action_categories = dict()
-    iam_data = IAMData()
     for service_key in iam_data.services.get_service_keys():
         service_name = iam_data.services.get_service_name(service_key)
         for action in iam_data.actions.get_actions_for_service(service_key):
