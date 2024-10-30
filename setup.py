@@ -28,7 +28,7 @@ setup(
         "wildcard",
     ],
     packages=["policyuniverse"],
-    package_data={"policyuniverse": ["data.json"]},
+    package_data={"policyuniverse": []},
     python_requires=">=3.7",
     include_package_data=True,
     zip_safe=False,

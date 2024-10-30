@@ -16,13 +16,6 @@ from policyuniverse.action import build_service_actions_from_service_data
 # Logging
 logger = logging.getLogger(__name__)
 
-# Read Input Data
-service_data_path = os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), "data.json"
-)
-
-service_data = json.load(open(service_data_path, "r"))
-
 iam_data = IAMData()
 _action_categories.update(build_action_categories_from_service_data(iam_data))
 all_permissions.update(build_service_actions_from_service_data(iam_data))
